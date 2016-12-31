@@ -246,7 +246,7 @@ err:
     return ret;
 }
 
-msym_error_t msymGetSubgroups(msym_context ctx, int *sgl, const msym_subgroup_t **sg){
+msym_error_t msymGetSubgroups(msym_context ctx, int *sgl, msym_subgroup_t **sg){
     msym_error_t ret = MSYM_SUCCESS;
     
     msym_subgroup_t *gsg = NULL;
@@ -393,7 +393,7 @@ err:
     return ret;
 }
 
-msym_error_t msymGetSymmetryOperations(msym_context ctx, int *sopsl, const msym_symmetry_operation_t **sops){
+msym_error_t msymGetSymmetryOperations(msym_context ctx, int *sopsl, msym_symmetry_operation_t **sops){
     msym_error_t ret = MSYM_SUCCESS;
     msym_symmetry_operation_t *rsops = NULL;
     if(ctx == NULL) {ret = MSYM_INVALID_CONTEXT; return ret;}
